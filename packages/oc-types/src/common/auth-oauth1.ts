@@ -14,13 +14,13 @@ export interface AuthOAuth1 {
   /** Access token key */
   accessToken?: string;
   /** Access token secret */
-  tokenSecret?: string;
+  accessTokenSecret?: string;
   /** Callback URL for the Temporary Credentials Request (RFC 5849 §2.1). Use "oob" for out-of-band. */
   callbackUrl?: string;
   /** Verification code from the Resource Owner Authorization step (RFC 5849 §2.2). Required in Token Credentials Request (§2.3). */
   verifier?: string;
-  /** Signature method */
-  signatureMethod?: 'HMAC-SHA1' | 'HMAC-SHA256' | 'HMAC-SHA512' | 'RSA-SHA1' | 'RSA-SHA256' | 'RSA-SHA512' | 'PLAINTEXT';
+  /** Signature encoding */
+  signatureEncoding?: 'HMAC-SHA1' | 'HMAC-SHA256' | 'HMAC-SHA512' | 'RSA-SHA1' | 'RSA-SHA256' | 'RSA-SHA512' | 'PLAINTEXT';
   /** Private key (PEM format, required for RSA-* methods). Use type 'text' for inline key, 'file' for file path. */
   privateKey?: { type: 'file' | 'text'; value: string };
   /** Custom timestamp (auto-generated if not provided) */
@@ -32,7 +32,7 @@ export interface AuthOAuth1 {
   /** Authentication realm */
   realm?: string;
   /** Where to add OAuth parameters */
-  addParamsTo?: 'header' | 'queryparams' | 'body';
+  addParamsTo?: 'header' | 'query' | 'body';
   /** Whether to include a body hash in the signature */
   includeBodyHash?: boolean;
 }

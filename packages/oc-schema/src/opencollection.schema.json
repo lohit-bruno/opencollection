@@ -1007,7 +1007,7 @@
           "type": "string",
           "description": "Access token key"
         },
-        "tokenSecret": {
+        "accessTokenSecret": {
           "type": "string",
           "description": "Access token secret"
         },
@@ -1019,10 +1019,10 @@
           "type": "string",
           "description": "Verification code from the Resource Owner Authorization step (RFC 5849 §2.2). Required in Token Credentials Request (§2.3)."
         },
-        "signatureMethod": {
+        "signatureEncoding": {
           "type": "string",
           "enum": ["HMAC-SHA1", "HMAC-SHA256", "HMAC-SHA512", "RSA-SHA1", "RSA-SHA256", "RSA-SHA512", "PLAINTEXT"],
-          "description": "Signature method"
+          "description": "Signature encoding"
         },
         "privateKey": {
           "type": "object",
@@ -1057,7 +1057,7 @@
         },
         "addParamsTo": {
           "type": "string",
-          "enum": ["header", "queryparams", "body"],
+          "enum": ["header", "query", "body"],
           "description": "Where to add OAuth parameters"
         },
         "includeBodyHash": {
