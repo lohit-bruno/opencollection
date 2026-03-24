@@ -32,7 +32,7 @@ export interface AuthOAuth1 {
   /** Authentication realm */
   realm?: string;
   /** Where to add OAuth parameters */
-  addParamsTo?: 'header' | 'query' | 'body';
+  placement?: 'header' | 'query' | 'body';
   /** Whether to include a body hash in the signature */
   includeBodyHash?: boolean;
 }

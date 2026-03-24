@@ -1055,7 +1055,7 @@
           "type": "string",
           "description": "Authentication realm"
         },
-        "addParamsTo": {
+        "placement": {
           "type": "string",
           "enum": ["header", "query", "body"],
           "description": "Where to add OAuth parameters"
