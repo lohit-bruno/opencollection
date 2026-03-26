@@ -19,8 +19,8 @@ export interface AuthOAuth1 {
   callbackUrl?: string;
   /** Verification code from the Resource Owner Authorization step (RFC 5849 §2.2). Required in Token Credentials Request (§2.3). */
   verifier?: string;
-  /** Signature encoding */
-  signatureEncoding?: 'HMAC-SHA1' | 'HMAC-SHA256' | 'HMAC-SHA512' | 'RSA-SHA1' | 'RSA-SHA256' | 'RSA-SHA512' | 'PLAINTEXT';
+  /** Signature method */
+  signatureMethod?: 'HMAC-SHA1' | 'HMAC-SHA256' | 'HMAC-SHA512' | 'RSA-SHA1' | 'RSA-SHA256' | 'RSA-SHA512' | 'PLAINTEXT';
   /** Private key (PEM format, required for RSA-* methods). Use type 'text' for inline key, 'file' for file path. */
   privateKey?: { type: 'file' | 'text'; value: string };
   /** Custom timestamp (auto-generated if not provided) */
