@@ -143,9 +143,10 @@ const DevApp: React.FC = () => {
   return (
     <Provider store={store}>
       <div style={{ height: '100vh', width: '100vw' }}>
-        <OpenCollection 
+        <OpenCollection
           collection={sampleCollectionYaml}
           logo="/src/assets/opencollection-logo.svg"
+          gitCollectionUrl="https://github.com/usebruno/bruno-testbench.git"
         />
       </div>
     </Provider>
