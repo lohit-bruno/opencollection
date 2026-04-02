@@ -1019,10 +1019,10 @@
           "type": "string",
           "description": "Verification code from the Resource Owner Authorization step (RFC 5849 §2.2). Required in Token Credentials Request (§2.3)."
         },
-        "signatureEncoding": {
+        "signatureMethod": {
           "type": "string",
           "enum": ["HMAC-SHA1", "HMAC-SHA256", "HMAC-SHA512", "RSA-SHA1", "RSA-SHA256", "RSA-SHA512", "PLAINTEXT"],
-          "description": "Signature encoding"
+          "description": "Signature method"
         },
         "privateKey": {
           "type": "object",
